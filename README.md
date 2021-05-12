@@ -104,9 +104,10 @@ Tools > Preferences > Network > Add New NAT Network > edit network address if yo
 It's old and installation is interrupted.
 Then you restart a VPS with `vagrant restart -provision` command and get a message:  
 `dpkg was interrupted, you must manually run 'sudo dpkg --configure -a' to correct the problem.`  
-Running dpkg command give you this:  
+Running dpkg command give you `The PostgreSQL version 8.4 is obsolete`:  
 
-![The PostgreSQL version 8.4 is obsolete](https://photos.app.goo.gl/aueXDk23GKsFMwk47)   
+See a [screenshot](https://photos.app.goo.gl/aueXDk23GKsFMwk47) for details.  
+
 And only then installation finished successfully.  
 
 It might not mean it's not possible to install old Postgresql version 8.4 automagically, but I didn't found a way how to suppress this interruption.  
