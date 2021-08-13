@@ -64,29 +64,6 @@ brew install hashicorp/tap/vagrant
 `Vagrant box` is a VPS image installed by Vagrant if VirtualBox or Parallels hypervisor installed in your system.
 Unfortunately, Vagrant works with `Parallels Pro` version only, so, I can't use Parallels hypervisor.
 
-Here was the message
-```bash
-The provider 'parallels' that was requested to back the machine
-'default' is reporting that it isn't usable on this system. The
-reason is shown below:
-
-Vagrant has detected that you have an edition of Parallels Desktop for Mac
-installed that is not supported. Vagrant Parallels provider is compatible
-only with Pro and Business editions of Parallels Desktop. Other editions
-do not have command line functionality and can not be used with Vagrant.
-
-Please upgrade your installation: https://parallels.com/desktop
-```
-
-If Parallels Pro is your choice and you want to work with Debian 10 then follow this link:
-[Vagrant box Bento Debian 10](https://app.vagrantup.com/bento/boxes/debian-10)
-
-You don't need to download the box itself.
-```bash
-vagrant plugin install vagrant-parallels
-vagrant init bento/debian-10
-vagrant up --provider=parallels
-```
 #### VirtualBox (MacOS)
 Download VirtualBox (MacOS)  
 [https://download.virtualbox.org/virtualbox/6.1.22/VirtualBox-6.1.22-144080-OSX.dmg](https://download.virtualbox.org/virtualbox/6.1.22/VirtualBox-6.1.22-144080-OSX.dmg)
@@ -113,6 +90,20 @@ And only then installation finished successfully.
 It might not mean it's not possible to install old Postgresql version 8.4 automagically, but I didn't found a way how to suppress this interruption.  
 
 I'm sure automagic will work if you install the latest version of Postgresql :)  
+
+## Extra
+### Copy files to a guest with Vagrant
+```bash
+config.vm.provision "file", source: "dc.wp.yml", destination: "~/dcwp/"
+```
+### Forward ports from guest to host
+```bash
+Vagrant.configure("2") do |config|
+  config.vm.define "vagrant" do |c|
+    c.vm.network "forwarded_port", guest:80, host:8080
+  end
+end  
+```
 
 ## Acknowledgments
 
