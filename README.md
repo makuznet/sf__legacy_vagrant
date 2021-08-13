@@ -118,7 +118,7 @@ This repo was inspired by [skillfactory.ru](https://skillfactory.ru/devops#sylla
 - [Postgresql Installation](https://wiki.postgresql.org/wiki/Apt)  
 - [Vagrant File Provisioner](https://www.vagrantup.com/docs/provisioning/file)  
 - [VirtualBox VM doesn't start on Mac](https://github.com/hashicorp/vagrant/issues/8687)  
-
+- [Hitting port 80 on a local virtualbox server](https://stackoverflow.com/questions/41371794/hitting-port-80-on-a-local-virtualbox-server)  
 
 ## License
 Follow all involved parties licenses terms and conditions.
