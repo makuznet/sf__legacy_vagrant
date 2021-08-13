@@ -115,7 +115,9 @@ This repo was inspired by [skillfactory.ru](https://skillfactory.ru/devops#sylla
 - [Vagrant Docs](https://www.vagrantup.com/docs)
 - [Vagrant box Bento Debian 10](https://app.vagrantup.com/bento/boxes/debian-10)
 - [VirtualBox Download](https://www.virtualbox.org/wiki/Downloads)
-- [Postgresql Installation](https://wiki.postgresql.org/wiki/Apt)
+- [Postgresql Installation](https://wiki.postgresql.org/wiki/Apt)  
+- [Vagrant File Provisioner](https://www.vagrantup.com/docs/provisioning/file)  
+- [VirtualBox VM doesn't start on Mac](https://github.com/hashicorp/vagrant/issues/8687)  
 
 
 ## License
